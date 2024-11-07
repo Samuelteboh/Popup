@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Popup</title>
+</head>
+<body>
+    <!------popup thankyou message------>
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <!----overlay----->
+        <div class="overlay" id="overlay"></div>
+
+        <div class="popup" id="popup">
+            <img src="popup.png">
+            <h2>Thank you!</h2>
+            <p>Your details has been successfully submmitted. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+        let overlay = document.getElementById("overlay");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>
